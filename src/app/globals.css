@@ -4,8 +4,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  --secondary-background: #23856D;
+  --secondary-foreground: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.nav-flexbar-stack {
+  background-color: var(--secondary-background);
+  color: var(--secondary-foreground);
+}
+
+.nav-flexbar {
+  height: 58px; /*replace*/
 }
 
 @layer utilities {
