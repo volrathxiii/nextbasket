@@ -42,3 +42,152 @@ body {
     text-wrap: balance;
   }
 }
+/* container */
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 15px;
+}
+.container-lg {
+  max-width: 1440px;
+}
+
+.container--md {
+  max-width: 1176px;
+}
+
+.container--sm {
+  max-width: 1100px;
+}
+
+/* typo */
+.paragraph {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  color: #737373;
+}
+.h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: .1px;
+  color: #252B42;
+}
+.h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: .2px;
+  color: #737373;
+}
+.h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .1px;
+  color: #252B42;
+}
+
+.secondary-color {
+  color: #23856D;
+}
+
+.muted-color {
+  color: #BDBDBD;
+}
+
+.link {
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: .2px;
+  font-size: 14px;
+  color: #737373;
+}
+/* Product */
+.product-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.product-thumbnail {
+  min-width: 183px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.product-thumbnail--image {
+  /* width: 20%;
+  height: 100px; */
+  height: 237px;
+  position: relative;
+}
+
+.product-title {
+  margin-top: 15px;
+  height: 55px;
+  display: grid;
+	align-items: center;
+}
+
+.product-brand {
+  height: 36px;
+  display: grid;
+	align-items: center;
+}
+
+.product-price {
+  line-height: 50px;
+}
+
+/* feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 300px 300px 300px 300px;
+  gap: 15px;
+}
+.feature-grid-item {
+  padding: 20px;
+  font-size: 30px;
+  position: relative;
+}
+.feature-grid-image {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 640px) {
+  .feature-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 300px 300px;
+  }
+  .fg-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .fg-4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px 300px;
+  }
+  .fg-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .fg-2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .fg-4 {
+    grid-row-start: initial;
+    grid-column-start: initial;
+    grid-column-end: initial;
+  }
+}

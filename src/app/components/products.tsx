@@ -14,11 +14,11 @@ const ProductList: React.FC<{ limit: number, category: string, id: string }> = a
   const data = await getInitialProps(limit, category)
   const listItems = data.props.data.products.map(product => <ProductThumbnail key={product.id} product={product}/>)
   return (
-    <div>
-      <div>
+    <div className="product-list">
+      <div className="flex flex-row flex-wrap gap-7">
         {listItems}
       </div>
-      <div id={id}>
+      <div id={id} className="flex flex-row flex-wrap gap-7">
 
       </div>
       <div>

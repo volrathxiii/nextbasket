@@ -24,9 +24,74 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-10 max-w-screen-xl w-full items-center justify-between text-sm">
-        <h3>Featured Products</h3>
-        <h2>BESTSELLER PRODUCTS</h2>
+      <div className="z-10 container container--md w-full items-center justify-between text-sm">
+        <div className="feature-grid">
+          <div className="feature-grid-item fg-1">
+            
+            <Image
+                src="https://placekitten.com/g/900/600"
+                alt="Category 1"
+                fill
+                sizes="
+                  (max-width: 1200px) 33vw, 
+                  (max-width: 1023px) 50vw,
+                  100vw"
+                objectFit='cover'
+                className="feature-grid-image z-10"
+                priority
+            />
+            <div className="feature-grid-info z-20">
+              Hello world
+            </div>
+          </div>
+          <div className="feature-grid-item fg-2">
+            <Image
+                src="https://placekitten.com/g/900/601"
+                alt="Category 2"
+                fill
+                objectFit='cover'
+                className="feature-grid-image"
+                sizes="
+                  (max-width: 1200px) 50vw, 
+                  (max-width: 1023px) 30vw,
+                  100vw"
+            />
+          </div>
+          <div className="feature-grid-item fg-3">
+            <Image
+                src="https://placekitten.com/g/921/627"
+                alt="Category 3"
+                fill
+                objectFit='cover'
+                className="feature-grid-image"
+                sizes="
+                  (max-width: 1200px) 30vw, 
+                  (max-width: 1023px) 30vw,
+                  100vw"
+            />
+          </div>
+          <div className="feature-grid-item fg-4">
+            <Image
+                src="https://placekitten.com/g/900/620"
+                alt="Category 4"
+                fill
+                objectFit='cover'
+                className="feature-grid-image"
+                sizes="
+                  (max-width: 1200px) 30vw, 
+                  (max-width: 1023px) 100vw,
+                  100vw"
+            />  
+          </div>  
+        </div>
+      </div>
+
+      <div className="z-10 container container--sm w-full items-center justify-between text-sm">
+        <div className="container-title flex flex-col flex-wrap gap-3">
+          <h4 className="h4 text-center">Featured Products</h4>
+          <h3 className="h3 text-center">BESTSELLER PRODUCTS</h3>
+          <p className="paragraph text-center">Products that are extremely popular and you should not miss.</p>
+        </div>
         <ProductList limit={10} category="" id="featured-products"></ProductList>
       </div>
 
