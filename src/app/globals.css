@@ -141,6 +141,13 @@ body {
   color: #23856D;
 }
 
+.dark-color {
+  color: #252B42
+}
+
+.success-color {
+  color: #2DC071;
+}
 .muted-color {
   color: #BDBDBD;
 }
@@ -159,64 +166,4 @@ body {
   letter-spacing: .2px;
   font-size: 14px;
   color: #737373;
-}
-
-
-/* feature grid */
-.feature-grid {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 300px 300px 300px 300px;
-  gap: 15px;
-}
-
-.feature-grid-item {
-  padding: 20px;
-  font-size: 30px;
-  position: relative;
-}
-
-.feature-grid-image {
-  opacity: 1;
-}
-
-@media only screen and (min-width: 640px) {
-  .feature-grid {
-    grid-template-columns: auto auto;
-    grid-template-rows: 300px 300px 300px;
-  }
-
-  .fg-1 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .fg-4 {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .feature-grid {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 300px 300px;
-  }
-
-  .fg-1 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .fg-2 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-
-  .fg-4 {
-    grid-row-start: initial;
-    grid-column-start: initial;
-    grid-column-end: initial;
-  }
 }
