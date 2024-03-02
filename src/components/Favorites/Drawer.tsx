@@ -17,12 +17,20 @@ export default function FavoriteDrawer() {
   const [thumbnails, setThumbnails] = useState<React.JSX.Element[]>([]);
 
   useEffect(() => {
-    setCount(Object.keys(favorites).length)
+    const favoriteItems = Object.keys(favorites).length
     let tempThumbnails = []
-    for (const [key, value] of Object.entries(favorites)) {
-      tempThumbnails.push(<ProductThumbnail key={value.id} product={value} priority={true} />)
+    setCount(favoriteItems)
+
+    if(favoriteItems >= 1) {
+      for (const [key, value] of Object.entries(favorites)) {
+        tempThumbnails.push(<ProductThumbnail key={value.id} product={value} priority={false} />)
+      }
+    } else {
+      tempThumbnails.push(<Box key={1} className="text-center w-full pb-10">Not yet sure if you want to buy? Click that heart instead!</Box>)
     }
+
     setThumbnails(tempThumbnails)
+    
   }, [favorites])
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -31,7 +39,7 @@ export default function FavoriteDrawer() {
 
   const DrawerList = (
     <Box sx={{ width: 300, bgcolor: 'muted.light' }} role="presentation" onClick={toggleDrawer(false)}>
-      <div className='px-3 py-20'>
+      <div className='px-3 py-20 min-h-screen'>
         <div className="container-title flex flex-col flex-wrap gap-3 pb-14">
           <h4 className="h4 text-center">Saved Products</h4>
           <h3 className="h3 text-center">FAVORITES</h3>

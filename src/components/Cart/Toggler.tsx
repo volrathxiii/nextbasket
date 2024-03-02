@@ -12,28 +12,19 @@ import { useEffect, useState } from "react";
  */
 const CartToggler: React.FC<{ product: ProductModel }> = ({ product }) => {
   const stored = useSelector((state: RootState) => state.cart.data[product.id])
-  const [cart, setCart] = useState('muted');
+  const [cartEnabled, enableCart] = useState<boolean>(false);
   const dispatch = useDispatch()
 
   useEffect(() => {
     if (stored) {
-      setCart('primary')
+      enableCart(true)
     } else {
-      setCart('muted')
+      enableCart(false)
     }
   }, [stored])
 
-  function toggleCart() {
-    // if (stored) {
-    //     dispatch(remove({ product }))
-    // } else {
-    dispatch(add({ product: product, count: 1 }))
-    // }
-  }
-
-
   return (
-    <IconButton color={cart} variant="outlined" aria-label="Add to cart" className="button--options" onClick={() => toggleCart()}>
+    <IconButton color={`primary`} disabled={cartEnabled} variant="outlined" aria-label="Add to cart" className="button--options" onClick={() => dispatch(add({ product: product, count: 1 }))}>
       <ShoppingCartOutlinedIcon />
     </IconButton>
 

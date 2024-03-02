@@ -1,6 +1,7 @@
 // src/app/theme.tsx
 'use client';
 import { Montserrat } from 'next/font/google';
+import shadows, { Shadows } from '@mui/material/styles/shadows';
 import { createTheme, alpha, getContrastRatio } from '@mui/material/styles';
 
 const montserrat = Montserrat({
@@ -20,7 +21,7 @@ const action = {
 }
 
 const theme = createTheme({
-  shadows: "none",
+  shadows: shadows.map(() => 'none') as Shadows,
   components: {
     MuiButtonBase: {
       defaultProps: {

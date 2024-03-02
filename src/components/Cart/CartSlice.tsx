@@ -6,7 +6,7 @@ export interface CartSlice {
   data: {
     [key: string]: {
       product: ProductModel,
-      count: 0
+      count: number
     }
   }
 }
@@ -38,12 +38,22 @@ export const CartSlice = createSlice({
       }
     },
 
-    setQuantity: (state, action: PayloadAction<{ product: ProductModel, count: number }>) => {
-      state.data = { ...state.data, [action.payload.product.id]: action.payload.product }
-    }
-  },
+    reduceQuantity: (state, action: PayloadAction<{ product: ProductModel }>) => {
+      state.data = { ...state.data, [action.payload.product.id]: {
+        product: action.payload.product,
+        count: state.data[action.payload.product.id].count-1
+      }}
+    },
+
+    addQuantity: (state, action: PayloadAction<{ product: ProductModel }>) => {
+      state.data = { ...state.data, [action.payload.product.id]: {
+        product: action.payload.product,
+        count: state.data[action.payload.product.id].count+1
+      }}
+    },
+  }
 })
 
-export const { add, remove, setQuantity } = CartSlice.actions
+export const { add, remove, addQuantity,reduceQuantity } = CartSlice.actions
 
 export default CartSlice.reducer

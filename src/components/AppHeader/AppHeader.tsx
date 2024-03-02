@@ -8,7 +8,7 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import SearchIcon from '@mui/icons-material/Search';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import CartDrawer from '@/components/Cart/Drawer';
 import FavoriteDrawer from '@/components/Favorites/Drawer';
 import styles from './appHeader.module.css'
 
@@ -81,9 +81,7 @@ const AppHeader = () => {
                   <SearchIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /></Link>
               </li>
               <li className={`${styles['nav-item']}`}>
-                <Link href='#' sx={{ minWidth: 40, fontSize: 12 }} className={`${styles['nav-item-menu']}`}>
-                  <ShoppingCartOutlinedIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /> 1
-                </Link>
+                <CartDrawer />
               </li>
               <li className={`${styles['nav-item']}`}>
                 <FavoriteDrawer />
