@@ -1,0 +1,39 @@
+/* Product */
+.product-list {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.product-thumbnail {
+  min-width: 183px;
+  max-width: 500px;
+  height: 400px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.product-thumbnail--image {
+  /* width: 20%;
+    height: 100px; */
+  height: 237px;
+  position: relative;
+}
+
+.product-title {
+  margin-top: 15px;
+  height: 55px;
+  display: grid;
+  align-items: center;
+}
+
+.product-brand {
+  height: 36px;
+  display: grid;
+  align-items: center;
+}
+
+.product-price {
+  line-height: 50px;
+}
+
+.product-preview {}

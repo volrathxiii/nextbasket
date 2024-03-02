@@ -13,32 +13,32 @@ const montserrat = Montserrat({
  * colors
  */
 const action = {
-    main: '#fff',
-    light: '#737373',
-    dark: '#fff',
-    contrastText: '#fff'
+  main: '#fff',
+  light: '#737373',
+  dark: '#fff',
+  contrastText: '#fff'
 }
 
 const theme = createTheme({
   shadows: "none",
   components: {
     MuiButtonBase: {
-        defaultProps: {
-          disableRipple: true,
-        },
+      defaultProps: {
+        disableRipple: true,
+      },
     },
     MuiButtonGroup: {
-        defaultProps: {
-          disableRipple: true,
-        },
+      defaultProps: {
+        disableRipple: true,
+      },
     },
   },
   typography: {
     fontFamily: montserrat.style.fontFamily,
     fontSize: 14,
     button: {
-        textTransform: "none"
-      }
+      textTransform: "none"
+    }
   },
   palette: {
     primary: {

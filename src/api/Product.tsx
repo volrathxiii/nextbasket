@@ -1,9 +1,9 @@
 
-import { type ProductType, type ProductModel, type ProductsModel} from "../types";
+import { type ProductType, type ProductModel, type ProductsModel} from "../app/types";
 
 const API_URL=`https://dummyjson.com/products`;
 /**
- * Post process data if needed, so we dont have to
+ * post process data if needed, so we dont have to
  * polute views with multiple computation
  */
 function Product(data:ProductType) : ProductModel {

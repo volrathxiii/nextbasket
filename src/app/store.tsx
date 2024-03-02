@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import FavoriteSlice from './components/Favorites/FavoriteSlice'
-import CartSlice from './components/Cart/CartSlice';
+import FavoriteSlice from '../components/Favorites/FavoriteSlice'
+import CartSlice from '../components/Cart/CartSlice';
 
 /**
  * redux-persist seems to have a bug
@@ -9,29 +9,29 @@ import CartSlice from './components/Cart/CartSlice';
  * localStorage
  */
 const localStorageMiddleware = ({ getState }) => {
-    return next => action => {
-        const result = next(action);
-        localStorage.setItem('applicationState', JSON.stringify(getState()));
-        return result;
-    };
+  return next => action => {
+    const result = next(action);
+    localStorage.setItem('applicationState', JSON.stringify(getState()));
+    return result;
+  };
 };
 
 const reHydrateStore = () => {
-    if (typeof window !== "undefined") {
-        if (localStorage.getItem('applicationState') !== null) {
-            return JSON.parse(localStorage.getItem('applicationState')); // re-hydrate the store
-        }
+  if (typeof window !== "undefined") {
+    if (localStorage.getItem('applicationState') !== null) {
+      return JSON.parse(localStorage.getItem('applicationState')); // re-hydrate the store
     }
+  }
 };
 
 export const store = configureStore({
-    reducer: {
-        favorites: FavoriteSlice,
-        cart: CartSlice
-    },
-    preloadedState: reHydrateStore(),
-    middleware: getDefaultMiddleware =>
-        getDefaultMiddleware().concat(localStorageMiddleware),
+  reducer: {
+    favorites: FavoriteSlice,
+    cart: CartSlice
+  },
+  preloadedState: reHydrateStore(),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(localStorageMiddleware),
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

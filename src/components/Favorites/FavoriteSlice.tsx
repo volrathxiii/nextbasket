@@ -16,17 +16,16 @@ export const FavoriteSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
-    remove: (state, action: PayloadAction<{product:ProductModel}>) => {
-      state.data  = Object.keys(state.data ).filter(objKey =>
-        objKey != action.payload.product.id).reduce((newObj, key) =>
-        {
-            newObj[key] = state.data[key];
-            return newObj;
+    remove: (state, action: PayloadAction<{ product: ProductModel }>) => {
+      state.data = Object.keys(state.data).filter(objKey =>
+        objKey != action.payload.product.id).reduce((newObj, key) => {
+          newObj[key] = state.data[key];
+          return newObj;
         }, {}
-      );
-  },
-    add: (state, action: PayloadAction<{product:ProductModel}>) => {
-        state.data = {...state.data, [action.payload.product.id]: action.payload.product}
+        );
+    },
+    add: (state, action: PayloadAction<{ product: ProductModel }>) => {
+      state.data = { ...state.data, [action.payload.product.id]: action.payload.product }
     }
   },
 })

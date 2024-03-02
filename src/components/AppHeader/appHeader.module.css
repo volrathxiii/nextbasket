@@ -68,9 +68,7 @@
     display: inline;
   }
 
-  .nav-item-menu {
-
-  }
+  .nav-item-menu {}
 
   .nav-group--tools {
     text-align: right;
@@ -80,7 +78,7 @@
 }
 
 .icon-button {
-  padding:8px;
+  padding: 8px;
   width: 40px;
   min-width: 40px;
   display: inline-flex;
@@ -99,5 +97,4 @@
   justify-content: center;
   position: relative;
   vertical-align: middle;
-  
 }

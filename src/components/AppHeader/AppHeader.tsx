@@ -1,15 +1,15 @@
 import Link from '@mui/material/Button';
 import { Icon } from '@mui/material';
-import FacebookIcon from '@/app/components/Icons/facebook'
-import InstagramIcon from '@/app/components/Icons/instagram'
-import TwitterIcon from '@/app/components/Icons/twitter'
-import YoutubeIcon from '@/app/components/Icons/youtube'
+import FacebookIcon from '@/components/Icons/facebook'
+import InstagramIcon from '@/components/Icons/instagram'
+import TwitterIcon from '@/components/Icons/twitter'
+import YoutubeIcon from '@/components/Icons/youtube'
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import FavoriteDrawer from '@/app/components/Favorites/Drawer';
+import FavoriteDrawer from '@/components/Favorites/Drawer';
 import styles from './appHeader.module.css'
 
 const AppHeader = () => {
@@ -77,11 +77,11 @@ const AppHeader = () => {
                 </Link>
               </li>
               <li className={`${styles['nav-item']}`}>
-                <Link href='#' sx={{minWidth:40}} className={`${styles['nav-item-menu']}`} aria-label='Search'>
+                <Link href='#' sx={{ minWidth: 40 }} className={`${styles['nav-item-menu']}`} aria-label='Search'>
                   <SearchIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /></Link>
               </li>
               <li className={`${styles['nav-item']}`}>
-                <Link href='#' sx={{minWidth:40, fontSize: 12}} className={`${styles['nav-item-menu']}`}>
+                <Link href='#' sx={{ minWidth: 40, fontSize: 12 }} className={`${styles['nav-item-menu']}`}>
                   <ShoppingCartOutlinedIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /> 1
                 </Link>
               </li>

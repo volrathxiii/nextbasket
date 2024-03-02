@@ -29,14 +29,16 @@ export const CartSlice = createSlice({
         );
     },
     // add item
-    add: (state, action: PayloadAction<{ product: ProductModel,count:number }>) => {
-      state.data = { ...state.data, [action.payload.product.id]: {
-        product:action.payload.product,
-        count: action.payload.count
-      }}
+    add: (state, action: PayloadAction<{ product: ProductModel, count: number }>) => {
+      state.data = {
+        ...state.data, [action.payload.product.id]: {
+          product: action.payload.product,
+          count: action.payload.count
+        }
+      }
     },
 
-    setQuantity: (state, action: PayloadAction<{ product: ProductModel,count:number }>) => {
+    setQuantity: (state, action: PayloadAction<{ product: ProductModel, count: number }>) => {
       state.data = { ...state.data, [action.payload.product.id]: action.payload.product }
     }
   },

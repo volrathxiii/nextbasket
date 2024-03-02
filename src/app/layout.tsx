@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from '@mui/material/styles';
 import ReduxProvider from './providers';
 
-import AppHeader from './components/AppHeader/AppHeader';
+import AppHeader from '../components/AppHeader/AppHeader';
 import theme from './theme';
 
 import "./globals.css";
@@ -27,9 +27,9 @@ export default function RootLayout({
           <ReduxProvider>
             <body>
               <main className="flex min-h-screen flex-col">
-              <AppHeader />
+                <AppHeader />
 
-              {children}
+                {children}
 
               </main>
             </body>

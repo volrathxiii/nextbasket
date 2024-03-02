@@ -1,7 +1,6 @@
 import Image from "next/legacy/image";
 
-
-import ProductList from './components/Product/List';
+import ProductList from '@/components/Product/List';
 
 export default function Home() {
   return (
@@ -10,18 +9,18 @@ export default function Home() {
       <div className="z-10 container container--tall container--md w-full items-center justify-between text-sm">
         <div className="feature-grid">
           <div className="feature-grid-item fg-1">
-            
+
             <Image
-                src="https://placekitten.com/g/900/600"
-                alt="Category 1"
-                layout="fill"
-                sizes="
+              src="https://placekitten.com/g/900/600"
+              alt="Category 1"
+              layout="fill"
+              sizes="
                   (max-width: 693px) 100vw, 
                   (max-width: 1023px) 50vw,
                   33vw"
-                objectFit='cover'
-                className="feature-grid-image z-10"
-                priority
+              objectFit='cover'
+              className="feature-grid-image z-10"
+              priority
             />
             <div className="feature-grid-info z-20">
               Hello world
@@ -29,46 +28,46 @@ export default function Home() {
           </div>
           <div className="feature-grid-item fg-2">
             <Image
-                src="https://placekitten.com/g/900/601"
-                alt="Category 2"
-                layout="fill"
-                objectFit='cover'
-                className="feature-grid-image"
-                sizes="
+              src="https://placekitten.com/g/900/601"
+              alt="Category 2"
+              layout="fill"
+              objectFit='cover'
+              className="feature-grid-image"
+              sizes="
                   (max-width: 693px) 100vw, 
                   (max-width: 1023px) 50vw,
                   66vw"
-                priority
+              priority
             />
           </div>
           <div className="feature-grid-item fg-3">
             <Image
-                src="https://placekitten.com/g/921/627"
-                alt="Category 3"
-                layout="fill"
-                objectFit='cover'
-                className="feature-grid-image"
-                sizes="
+              src="https://placekitten.com/g/921/627"
+              alt="Category 3"
+              layout="fill"
+              objectFit='cover'
+              className="feature-grid-image"
+              sizes="
                   (max-width: 693px) 100vw,  
                   (max-width: 1023px) 50vw,
                   33vw"
-                priority
+              priority
             />
           </div>
           <div className="feature-grid-item fg-4">
             <Image
-                src="https://placekitten.com/g/900/620"
-                alt="Category 4"
-                layout="fill"
-                objectFit='cover'
-                className="feature-grid-image"
-                sizes="
+              src="https://placekitten.com/g/900/620"
+              alt="Category 4"
+              layout="fill"
+              objectFit='cover'
+              className="feature-grid-image"
+              sizes="
                   (max-width: 693px) 100vw,  
                   (max-width: 1023px) 100vw,
                   33vw"
-                priority
-            />  
-          </div>  
+              priority
+            />
+          </div>
         </div>
       </div>
 
