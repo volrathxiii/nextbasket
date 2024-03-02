@@ -33,7 +33,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
                 <Button color="primary" variant="contained">Select Options</Button>
                 <FavoriteToggler product={product}></FavoriteToggler>
                 <CartToggler product={product}></CartToggler>
-                <IconButton color="muted" variant="outlined" aria-label="Visibility" className="button--options">
+                <IconButton>
                   <VisibilityOutlinedIcon />
                 </IconButton>
               </Stack>

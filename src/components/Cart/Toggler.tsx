@@ -24,7 +24,7 @@ const CartToggler: React.FC<{ product: ProductModel }> = ({ product }) => {
   }, [stored])
 
   return (
-    <IconButton color={`primary`} disabled={cartEnabled} variant="outlined" aria-label="Add to cart" className="button--options" onClick={() => dispatch(add({ product: product, count: 1 }))}>
+    <IconButton color={`primary`} disabled={cartEnabled} aria-label="Add to cart" className="button--options" onClick={()=>dispatch(add({ product: product, count: 1 }))}>
       <ShoppingCartOutlinedIcon />
     </IconButton>
 

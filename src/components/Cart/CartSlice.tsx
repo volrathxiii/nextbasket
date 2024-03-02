@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { ProductModel } from '@/app/types'
+import type { ProductModel } from '@/app/types' 
+
+export interface CartModel {
+  [key: number]: {
+    product: ProductModel,
+    count: number
+  }
+}
 
 export interface CartSlice {
-  data: {
-    [key: string]: {
-      product: ProductModel,
-      count: number
-    }
-  }
+  data: CartModel
 }
 
 const initialState: CartSlice = {
@@ -21,9 +23,10 @@ export const CartSlice = createSlice({
   reducers: {
     // remove item
     remove: (state, action: PayloadAction<{ product: ProductModel }>) => {
-      state.data = Object.keys(state.data).filter((objKey: string) =>
-        objKey != action.payload.product.id).reduce((newObj, key: string) => {
-          newObj[key] = state.data[key];
+      state.data = Object.keys(state.data)
+        .filter((objKey: string) => objKey !== String(action.payload.product.id))
+        .reduce((newObj: CartModel, key: string) => {
+          newObj[Number(key)] = state.data[Number(key)];
           return newObj;
         }, {}
         );

@@ -8,14 +8,9 @@ const ProductList: React.FC<{ limit: number, category: string, id: string }> = a
   const listItems = data.products.map(product => <ProductThumbnail key={product.id} product={product} priority={true} />)
 
   return (
-    <div className={styles['product-list']}>
-      <div id={id} className="flex flex-row flex-wrap gap-7 content-start">
-        {listItems}
-      </div>
-      <div>
-        <ProductsLoader page={1} target={id} limit={limit} category={category} initial={data.products} total={data.total} />
-      </div>
-    </div>
+        <ProductsLoader page={1} target={id} limit={limit} category={category} initial={data.products} total={data.total}>
+          {listItems}
+        </ProductsLoader>
   )
 }
 

@@ -2,10 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { ProductModel } from '@/app/types'
 
+export interface FavoriteModel {
+  [key: number]: ProductModel
+}
+
 export interface FavoriteSlice {
-  data: {
-    [key: number]: ProductModel
-  }
+  data: FavoriteModel
 }
 
 const initialState: FavoriteSlice = {
@@ -17,9 +19,10 @@ export const FavoriteSlice = createSlice({
   initialState,
   reducers: {
     remove: (state, action: PayloadAction<{ product: ProductModel }>) => {
-      state.data = Object.keys(state.data).filter(objKey =>
-        objKey != action.payload.product.id).reduce((newObj, key) => {
-          newObj[key] = state.data[key];
+      state.data = Object.keys(state.data)
+        .filter(objKey => objKey != String(action.payload.product.id))
+        .reduce((newObj:FavoriteModel, key) => {
+          newObj[Number(key)] = state.data[Number(key)];
           return newObj;
         }, {}
         );

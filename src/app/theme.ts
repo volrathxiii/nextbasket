@@ -10,16 +10,6 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-/**
- * colors
- */
-const action = {
-  main: '#fff',
-  light: '#737373',
-  dark: '#fff',
-  contrastText: '#fff'
-}
-
 const theme = createTheme({
   shadows: shadows.map(() => 'none') as Shadows,
   components: {
@@ -46,17 +36,11 @@ const theme = createTheme({
       main: '#23A6F0',
       contrastText: '#fff'
     },
-    muted: {
+    info: {
       main: '#737373',
-      light: '#FAFAFA',
+      light: '#fff',
       contrastText: '#000'
-    },
-    action: {
-      main: '#fff',
-      light: '#737373',
-      dark: '#fff',
-      contrastText: '#fff'
-    },
+    }
   }
 });
 

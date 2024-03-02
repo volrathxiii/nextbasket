@@ -10,14 +10,14 @@ import { useEffect, useState } from "react";
 
 const FavoriteToggler: React.FC<{ product: ProductModel }> = ({ product }) => {
   const stored = useSelector((state: RootState) => state.favorites.data[product.id])
-  const [favorite, setFavorite] = useState('muted');
+  const [favoriteClass, setFavoriteClass] = useState('info');
   const dispatch = useDispatch()
 
   useEffect(() => {
     if (stored) {
-      setFavorite('primary')
+      setFavoriteClass('primary-color')
     } else {
-      setFavorite('muted')
+      setFavoriteClass('info-color')
     }
   }, [stored])
 
@@ -30,9 +30,11 @@ const FavoriteToggler: React.FC<{ product: ProductModel }> = ({ product }) => {
   }
 
   return (
-    <IconButton className={`button--options`} color={favorite} variant="outlined" aria-label="Favorite" onClick={() => toggleFavorite()}>
+    <span className={`${favoriteClass}`}>
+    <IconButton className={`button--options`} color="inherit" aria-label="Favorite" onClick={() => toggleFavorite()}>
       <FavoriteBorderOutlinedIcon />
     </IconButton>
+    </span>
   );
 }
 

@@ -49,7 +49,7 @@ export default function CartDrawer() {
   };
 
   const DrawerList = (
-    <Box sx={{ minWidth: { xs: 1, sm: 400, md: 400, lg: 400 }, bgcolor: 'muted.light' }} role="presentation" >
+    <Box sx={{ maxWidth: { xs: 1, sm: 450, md: 450, lg: 450 }, bgcolor: 'muted.light' }} role="presentation" >
       <div className='px-6 py-20 min-h-screen'>
         <div className="container-title flex flex-col flex-wrap gap-3 pb-14">
           <h4 className="h4 text-center">Checkout</h4>

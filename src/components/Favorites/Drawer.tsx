@@ -38,7 +38,7 @@ export default function FavoriteDrawer() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 300, bgcolor: 'muted.light' }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 350, bgcolor: 'info.light' }} role="presentation" onClick={toggleDrawer(false)}>
       <div className='px-3 py-20 min-h-screen'>
         <div className="container-title flex flex-col flex-wrap gap-3 pb-14">
           <h4 className="h4 text-center">Saved Products</h4>
