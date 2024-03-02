@@ -36,7 +36,7 @@ export default function CartDrawer() {
       </Box>)
     } else {
       // generate empty cart message
-      tempThumbnails.push(<Box key={1} className="text-center w-full pb-10">Don't leave empty shopping cart in parking space please!</Box>)
+      tempThumbnails.push(<Box key={1} className="text-center w-full pb-10">Don&apos;t leave empty shopping cart in parking space please!</Box>)
       disableCheckoutButton(true)
     }
 
