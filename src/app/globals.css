@@ -20,12 +20,21 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #FAFAFA;
+}
+
+.svg-white {
+  fill: #fff;
+}
+.button--sx {
+  min-width: 40px;
+}
+
+.background-primary {
+  background-color: #fff;
+}
+.background-secondary {
+  background-color: #FAFAFA;
 }
 
 .nav-flexbar-stack {
@@ -44,9 +53,16 @@ body {
 }
 /* container */
 .container {
+  padding: 0 48px;
+}
+@media only screen and (min-width: 640px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+.container--tall {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 0 15px;
 }
 .container-lg {
   max-width: 1440px;
@@ -58,6 +74,10 @@ body {
 
 .container--sm {
   max-width: 1100px;
+}
+
+.container--sx {
+  max-width: 1056px;
 }
 
 /* typo */
@@ -89,6 +109,22 @@ body {
   letter-spacing: .1px;
   color: #252B42;
 }
+.h6 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .2px;
+  color: #737373;
+}
+
+/**buttons*/
+.button--options {
+  border: 1px solid #E8E8E8;
+}
+
+.primary-color {
+  color: #23A6F0;
+}
 
 .secondary-color {
   color: #23856D;
@@ -98,6 +134,14 @@ body {
   color: #BDBDBD;
 }
 
+.link-color {
+  color: #737373;
+}
+
+.text--small {
+  font-size: 12px;
+}
+
 .link {
   font-weight: 700;
   line-height: 18px;
@@ -105,40 +149,7 @@ body {
   font-size: 14px;
   color: #737373;
 }
-/* Product */
-.product-list {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.product-thumbnail {
-  min-width: 183px;
-  height: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-.product-thumbnail--image {
-  /* width: 20%;
-  height: 100px; */
-  height: 237px;
-  position: relative;
-}
 
-.product-title {
-  margin-top: 15px;
-  height: 55px;
-  display: grid;
-	align-items: center;
-}
-
-.product-brand {
-  height: 36px;
-  display: grid;
-	align-items: center;
-}
-
-.product-price {
-  line-height: 50px;
-}
 
 /* feature grid */
 .feature-grid {
@@ -191,3 +202,5 @@ body {
     grid-column-end: initial;
   }
 }
+
+

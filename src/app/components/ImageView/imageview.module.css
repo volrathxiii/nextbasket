@@ -1,0 +1,19 @@
+.view {
+    position: relative;
+}
+.imageview {
+    height:450px;
+    position: relative;
+}
+.imageindicator {
+    height: 75px;
+}
+.indicatorcontainer {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    grid-gap: 10px;
+}
+.indicatorbutton{
+
+}

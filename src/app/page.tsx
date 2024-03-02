@@ -1,41 +1,24 @@
-import Image from "next/image";
-import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Button';
+import Image from "next/legacy/image";
 
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
-import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 
-import ProductList from './components/products';
+import ProductList from './components/Product/List';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="nav-flexbar-stack z-10 hidden lg:flex w-full">
-        <div className="block mx-auto max-w-screen-xl w-full">
-          <div className="nav-flexbar flex flex-row flex-nowrap items-center justify-between">
-            <Stack spacing={2} direction="row" className="flex flex-row items-center justify-between">
-              <Link color="inherit" className="sm:basis:1 md:basis:1/2"><LocalPhoneOutlinedIcon color="action" fontSize="small" /> +63 (917) 894-2849</Link>
-              <Link color="inherit" className="sm:basis:1 md:basis:1/2"><MailOutlinedIcon color="action" fontSize="small" /> patrick.taguinod.rivera@gmail.com</Link>
-            </Stack>
-            <div className="grow text-center"><p>Follow US and get a chance to win 80% off</p></div>
-            <div className="grow text-right"><p>Follow Us:<Link color="inherit"><MailOutlinedIcon color="action" fontSize="small" /></Link></p></div>
-          </div>
-        </div>
-      </div>
+    <div className="flex flex-col items-center w-full background-primary">
 
-      <div className="z-10 container container--md w-full items-center justify-between text-sm">
+      <div className="z-10 container container--tall container--md w-full items-center justify-between text-sm">
         <div className="feature-grid">
           <div className="feature-grid-item fg-1">
             
             <Image
                 src="https://placekitten.com/g/900/600"
                 alt="Category 1"
-                fill
+                layout="fill"
                 sizes="
-                  (max-width: 1200px) 33vw, 
+                  (max-width: 693px) 100vw, 
                   (max-width: 1023px) 50vw,
-                  100vw"
+                  33vw"
                 objectFit='cover'
                 className="feature-grid-image z-10"
                 priority
@@ -48,45 +31,48 @@ export default function Home() {
             <Image
                 src="https://placekitten.com/g/900/601"
                 alt="Category 2"
-                fill
+                layout="fill"
                 objectFit='cover'
                 className="feature-grid-image"
                 sizes="
-                  (max-width: 1200px) 50vw, 
-                  (max-width: 1023px) 30vw,
-                  100vw"
+                  (max-width: 693px) 100vw, 
+                  (max-width: 1023px) 50vw,
+                  66vw"
+                priority
             />
           </div>
           <div className="feature-grid-item fg-3">
             <Image
                 src="https://placekitten.com/g/921/627"
                 alt="Category 3"
-                fill
+                layout="fill"
                 objectFit='cover'
                 className="feature-grid-image"
                 sizes="
-                  (max-width: 1200px) 30vw, 
-                  (max-width: 1023px) 30vw,
-                  100vw"
+                  (max-width: 693px) 100vw,  
+                  (max-width: 1023px) 50vw,
+                  33vw"
+                priority
             />
           </div>
           <div className="feature-grid-item fg-4">
             <Image
                 src="https://placekitten.com/g/900/620"
                 alt="Category 4"
-                fill
+                layout="fill"
                 objectFit='cover'
                 className="feature-grid-image"
                 sizes="
-                  (max-width: 1200px) 30vw, 
+                  (max-width: 693px) 100vw,  
                   (max-width: 1023px) 100vw,
-                  100vw"
+                  33vw"
+                priority
             />  
           </div>  
         </div>
       </div>
 
-      <div className="z-10 container container--sm w-full items-center justify-between text-sm">
+      <div className="z-10 container container-tall container--sm w-full items-center justify-between text-sm">
         <div className="container-title flex flex-col flex-wrap gap-3">
           <h4 className="h4 text-center">Featured Products</h4>
           <h3 className="h3 text-center">BESTSELLER PRODUCTS</h3>
@@ -200,6 +186,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </div>
   );
 }

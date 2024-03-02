@@ -1,10 +1,10 @@
-export interface Product {
+export interface ProductType {
     brand: "",
     category: string;
     description: string;
-    discountPercentage: number;
+    discountPercentage: string;
     id: number;
-    images: object;
+    images: Array<string>;
     price: number;
     rating: number;
     stock: number;
@@ -12,9 +12,18 @@ export interface Product {
     title: string;
 }
 
-export interface Products {
+export interface ProductsType {
     limit: number;
-    products: Array<Product>;
+    products: Array<ProductType>;
     total: number;
     skip: number;
+}
+
+export interface ProductModel extends ProductType {
+    discountedPrice: number
+    discountedPriceDecimal: string
+}
+
+export interface ProductsModel extends ProductsType {
+    products: Array<ProductModel>
 }

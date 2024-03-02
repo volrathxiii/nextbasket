@@ -1,9 +1,14 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import type { Metadata } from "next";
 import { ThemeProvider } from '@mui/material/styles';
+import ReduxProvider from './providers';
+
+import AppHeader from './components/AppHeader/AppHeader';
 import theme from './theme';
 
 import "./globals.css";
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +24,16 @@ export default function RootLayout({
     <html lang="en">
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
-          <body>{children}</body>
+          <ReduxProvider>
+            <body>
+              <main className="flex min-h-screen flex-col">
+              <AppHeader />
+
+              {children}
+
+              </main>
+            </body>
+          </ReduxProvider>
         </ThemeProvider>
       </AppRouterCacheProvider>
     </html>
