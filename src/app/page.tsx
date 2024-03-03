@@ -2,6 +2,8 @@ import HeroGrid from "@/components/Hero/Grid";
 import ServicesFeatured from "@/components/Services/Featured";
 import ProductList from '@/components/Product/List';
 import PostsFeatured from "@/components/Posts/Featured";
+import TestimonialFeatured from "@/components/Testimonial/Featured";
+import HeroBanner from "@/components/Hero/Banner";
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
 
       <ServicesFeatured />
       <PostsFeatured />
+      <TestimonialFeatured />
+      <HeroBanner />
     </div>
   );
 }

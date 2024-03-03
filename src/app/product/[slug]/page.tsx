@@ -6,6 +6,7 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FavoriteToggler from "@/components/Favorites/Toggler";
 import ProductList from "@/components/Product/List";
 import CartToggler from "@/components/Cart/Toggler";
+import ProductDescription from "@/components/Product/Description";
 
 export default async function Product({ params }: { params: { slug: number } }) {
   const product = await getProduct(params.slug)
@@ -43,7 +44,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
       </div>
       <div className={`w-full background-primary`}>
         <div className={`container container--sx mx-auto w-full`}>
-          MORE INFO
+          <ProductDescription />
         </div>
       </div>
       <div className={`container container--sx mx-auto w-full`}>

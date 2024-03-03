@@ -3,17 +3,18 @@ import type { Metadata } from "next";
 import { ThemeProvider } from '@mui/material/styles';
 import ReduxProvider from './providers';
 import { Montserrat } from 'next/font/google';
+import AppHeader from '../components/AppHeader/AppHeader';
+import AppFooter from '@/components/AppFooter/AppFooter';
+import theme from './theme';
 
+import "./globals.css";
 const montserrat = Montserrat({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
 
-import AppHeader from '../components/AppHeader/AppHeader';
-import theme from './theme';
 
-import "./globals.css";
 
 
 
@@ -37,7 +38,7 @@ export default function RootLayout({
                 <AppHeader />
 
                 {children}
-
+                <AppFooter />
               </main>
             </body>
           </ReduxProvider>

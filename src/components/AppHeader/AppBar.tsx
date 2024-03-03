@@ -33,7 +33,7 @@ const AppBar = () => {
   <div className="background-primary">
         <div className={`${styles['app-bar']} mx-auto container max-w-screen-xl w-full`}>
           <div className={`${styles['app-header']}`}>
-            <div className={`h3 logo`}>Bandage</div>
+            <div><Link href='/' ><span className={`h3 logo`}>Bandage</span></Link></div>
           </div>
           <nav className={`${styles['nav-bar']} ${styles['mobile-menu']} ${mobileOpenClass}`}>
             <ul className={`${styles['nav-group']} ${styles['nav-group--menu']}`}>

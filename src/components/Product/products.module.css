@@ -5,7 +5,7 @@
 
 .product-thumbnail {
   min-width: 183px;
-  max-width: 500px;
+  max-width: 480px;
   height: 400px;
   text-align: center;
   background-color: #fff;
@@ -36,3 +36,9 @@
 }
 
 .product-preview {}
+
+.product-description-header {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+}
