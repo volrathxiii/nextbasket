@@ -150,10 +150,20 @@ body {
   font-size: 14px;
   color: #737373;
 }
+.qoute {
+  padding: 15px;
+  border-color: #23856D;
+  border-style: solid;
+  border-left-width: 3px;
+}
 
 /**buttons*/
-.button--options {
+.button--options  {
   border: 1px solid #E8E8E8;
+}
+
+.border-top-light {
+  border-top: 1px solid #E8E8E8;
 }
 
 .primary-color {
@@ -171,6 +181,14 @@ body {
 .success-color {
   color: #2DC071;
 }
+
+.warning-color {
+  color: #E77C40;
+}
+
+.error-color {
+  color: red;
+}
 .muted-color {
   color: #BDBDBD;
 }
@@ -181,4 +199,8 @@ body {
 
 .text--small {
   font-size: 12px;
+}
+
+.footer-icon {
+  width: 150px;
 }

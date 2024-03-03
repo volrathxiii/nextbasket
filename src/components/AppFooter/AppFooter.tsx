@@ -8,7 +8,7 @@ import stylesIcon from '@/components/AppHeader/appHeader.module.css'
 const AppFooter = () => {
   return (
     <div>
-      <div className='flex flex-col background-secondary'>
+      <div className='flex flex-col background-primary'>
         <div className="block mx-auto container container--sm w-full">
           <div className="flex flex-col items-left justify-between py-10 sm:flex-row sm:items-center">
             <div className={`h3 logo p-2`}>Bandage</div>
@@ -37,9 +37,9 @@ const AppFooter = () => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col background-primary'>
+      <div className='flex flex-col background-primary '>
         <div className="block mx-auto container container--sm w-full">
-          <div className="flex flex-col gap-8 items-left justify-between py-10 sm:flex-row">
+          <div className="flex flex-col gap-8 items-left justify-between py-10 sm:flex-row border-top-light">
             <div className="flex flex-col gap-2.5">
               <div className={`h5`}>Company Info</div>
               <div className='link'>About Us</div>
@@ -72,7 +72,7 @@ const AppFooter = () => {
               <div className={`h5`}>Get in Touch</div>
               <div className='link'>
                 <FormGroup row>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" size='small' /><Button size='small' variant='contained'>Subscribe</Button>
+                <TextField id="outlined-basic" label="Your Email" variant="outlined" size='small' /><Button size='small' variant='contained'>Subscribe</Button>
                 </FormGroup>
                 </div>
             </div>

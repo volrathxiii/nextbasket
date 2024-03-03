@@ -46,3 +46,27 @@
 
 
 .product-options {}
+
+/* footer grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+@media only screen and (min-width: 410px) {
+  .footer-grid {
+    grid-template-columns: auto auto ;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  .footer-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .footer-grid {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}

@@ -13,7 +13,7 @@ const AppHeader = () => {
   return (
     <div>
       <div className="nav-flexbar-stack z-10 hidden lg:flex w-full">
-        <div className="block mx-auto container max-w-screen-xl w-full">
+        <div className="block mx-auto container container--sm w-full">
           <div className="nav-flexbar flex flex-row flex-nowrap items-center justify-between">
             <div>
               <Link sx={{color:'#fff'}}>

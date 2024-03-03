@@ -42,3 +42,28 @@
   margin: 0 auto;
   padding: 24px;
 }
+
+.product-description-details {
+  padding: 50px 0;
+}
+
+.product-description-photo {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+.product-description--mobile {
+  display: block;
+}
+/**
+ * product description responsiveness
+ */
+@media only screen and (min-width: 840px) {
+  .product-description--desktop {
+    display: block;
+  }
+  .product-description--mobile {
+    display: none;
+  }
+}

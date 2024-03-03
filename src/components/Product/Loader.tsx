@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { type ProductModel } from "@/app/types";
 import ProductThumbnail from '@/components/Product/Thumbnail';
 import { getProducts } from "@/api/Product";
@@ -10,7 +10,7 @@ const ProductsLoader: React.FC<{ page: number, limit: number, target: string, ca
   const [isLoading, setLoading] = useState(false)
   const [currentPage, setPage] = useState(page)
   const [productList, setProducts] = useState<ProductModel[]>(initial)
-  const [buttonText, setButtonText] = useState<string>('')
+  const [buttonText, setButtonText] = useState<string>('LOAD MORE PRODUCTS')
   const [buttonDisabled, setButtonDisabled] = useState(false)
   const [childrenHTML, setChildrenHTML] = useState(children)
   const [hasMore, setHasMore] = useState((total > initial.length) ? 'block' : 'hidden')
@@ -22,12 +22,10 @@ const ProductsLoader: React.FC<{ page: number, limit: number, target: string, ca
         children.push(<ProductThumbnail key={product.id} product={product} priority={false} />)
       })
       setChildrenHTML(children)
-      console.log('refresh view', productList.length)
   }, [productList])
 
   // update button
   useEffect(() => {
-    console.log('refresh button')
     if (isLoading) {
       setButtonText('LOADING...')
       setButtonDisabled(true)
