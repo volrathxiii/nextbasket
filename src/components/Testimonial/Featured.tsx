@@ -20,7 +20,6 @@ const TestimonialFeatured = () => {
                 (max-width: 1023px) 50vw,
                 66vw"
                 style={{
-                  objectFit: "cover",
                   borderRadius: "45px",
                   objectFit: "cover"
                 }} />
