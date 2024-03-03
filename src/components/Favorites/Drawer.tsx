@@ -38,7 +38,7 @@ export default function FavoriteDrawer() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 350, bgcolor: 'info.light' }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 320, bgcolor: 'info.light' }} role="presentation" onClick={toggleDrawer(false)}>
       <div className='px-3 py-20 min-h-screen'>
         <div className="container-title flex flex-col flex-wrap gap-3 pb-14">
           <h4 className="h4 text-center">Saved Products</h4>
@@ -54,7 +54,7 @@ export default function FavoriteDrawer() {
   return (
     <span>
       <Link onClick={toggleDrawer(true)} sx={{ minWidth: 40, fontSize: 12 }} className={`${styles['nav-item-menu']}`}>
-        <FavoriteBorderOutlinedIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /> {`${count}`}
+        <FavoriteBorderOutlinedIcon sx={{ fontSize: { xs: 24, sm: 24, md: 18, lg: 18 } }} /> {`${count}`}
       </Link>
       <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
         {DrawerList}

@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import styles from "./imageview.module.css";

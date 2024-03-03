@@ -1,0 +1,9 @@
+.hero-block {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+}
+.image {
+  font-size: 72px;
+}

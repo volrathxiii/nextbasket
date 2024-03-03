@@ -57,18 +57,22 @@ body {
 
 /* container */
 .container {
-  padding: 0 48px;
+  padding: 0 35px;
 }
 
-@media only screen and (min-width: 640px) {
-  .container {
-    padding: 0 15px;
-  }
+.container-title {
+  padding-bottom: 50px;
 }
+
+/* @media only screen and (min-width: 640px) {
+  .container {
+    padding: 0 35px;
+  }
+} */
 
 .container--tall {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .container-lg {
@@ -94,6 +98,14 @@ body {
   line-height: 20px;
   letter-spacing: .2px;
   color: #737373;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: .2px;
+  color: #252B42;
 }
 
 .h3 {

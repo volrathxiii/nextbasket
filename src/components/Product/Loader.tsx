@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { type ProductModel } from "@/app/types";
 import ProductThumbnail from '@/components/Product/Thumbnail';
 import { getProducts } from "@/api/Product";
@@ -17,15 +17,17 @@ const ProductsLoader: React.FC<{ page: number, limit: number, target: string, ca
 
   // refresh view
   useEffect(() => {
-    let children: React.ReactNode[] = [];
-    productList.map((product) => {
-      children.push(<ProductThumbnail key={product.id} product={product} priority={false} />)
-    })
-    setChildrenHTML(children)
+      let children: React.ReactNode[] = [];
+      productList.map((product) => {
+        children.push(<ProductThumbnail key={product.id} product={product} priority={false} />)
+      })
+      setChildrenHTML(children)
+      console.log('refresh view', productList.length)
   }, [productList])
 
   // update button
   useEffect(() => {
+    console.log('refresh button')
     if (isLoading) {
       setButtonText('LOADING...')
       setButtonDisabled(true)
@@ -55,7 +57,7 @@ const ProductsLoader: React.FC<{ page: number, limit: number, target: string, ca
       <div className="flex flex-row flex-wrap gap-7 content-start">
         {childrenHTML}
       </div>
-      <div className={`w-full text-center py-20 ${hasMore}`}>
+      <div className={`w-full text-center pt-20 ${hasMore}`}>
         <Button variant='outlined' disabled={buttonDisabled} onClick={loadMore}>{buttonText}</Button>
 
       </div>

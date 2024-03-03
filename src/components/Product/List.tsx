@@ -1,6 +1,5 @@
 import ProductThumbnail from '@/components/Product/Thumbnail';
 import ProductsLoader from '@/components/Product/Loader';
-import styles from './products.module.css'
 import { getProducts } from "@/api/Product";
 
 const ProductList: React.FC<{ limit: number, category: string, id: string }> = async ({ limit, category, id }) => {

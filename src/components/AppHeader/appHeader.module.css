@@ -1,7 +1,7 @@
 /**navigation**/
 .app-bar {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 120px auto;
   grid-template-rows: 78px auto;
   align-items: center;
   overflow: hidden;
@@ -9,7 +9,7 @@
 
 .app-header {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   align-items: center;
 }
 
@@ -22,7 +22,10 @@
 .nav-bar {
   display: grid;
   grid-template-columns: auto;
-  /* height: 0; */
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .nav-group {
@@ -32,6 +35,9 @@
 .nav-item {
   display: block;
   text-align: center;
+}
+.nav-item-tool {
+  display: inline-block;
 }
 
 .nav-item-menu {
@@ -45,19 +51,44 @@
 }
 
 .nav-group--tools {
-  padding-bottom: 40px;
+  
+}
+.nav-group--tools {
+  text-align: right;
+  align-self: right;
+  padding-bottom: initial;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media only screen and (max-width: 899px) {
+  .mobile-menu {
+    height: 0;
+  }
+  .mobile-menu--open {
+    height: initial;
+    max-height: max-content;
+  }
 }
 
 @media only screen and (min-width: 900px) {
+  .desktop-only {
+    display: inline;
+  }
   .app-bar {
-    grid-template-columns: 200px auto;
+    grid-template-columns: 140px auto auto;
     grid-template-rows: 78px;
   }
 
   .nav-bar {
-    grid-template-columns: auto auto;
     padding: 0;
     height: auto;
+    grid-row-start: initial;
+    grid-row-end: initial;
+    grid-column-start: initial;
+    grid-column-end: initial;
   }
 
   .nav-toggler {
@@ -70,11 +101,6 @@
 
   .nav-item-menu {}
 
-  .nav-group--tools {
-    text-align: right;
-    align-self: right;
-    padding-bottom: initial;
-  }
 }
 
 .icon-button {

@@ -14,6 +14,12 @@ const nextConfig = {
         port: '',
         pathname: '/g/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'random.imagecdn.app',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   compiler: {

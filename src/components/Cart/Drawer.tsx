@@ -76,7 +76,7 @@ export default function CartDrawer() {
   return (
     <React.Fragment>
       <Link onClick={toggleDrawer(true)} sx={{ minWidth: 40, fontSize: 12 }} className={`${styles['nav-item-menu']}`}>
-        <ShoppingCartOutlinedIcon sx={{ fontSize: { xs: 40, sm: 40, md: 18, lg: 18 } }} /> {`${count}`}
+        <ShoppingCartOutlinedIcon sx={{ fontSize: { xs: 24, sm: 24, md: 18, lg: 18 } }} /> {`${count}`}
       </Link>
       <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
