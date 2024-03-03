@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import styles from '@/components/Hero/hero.module.css'
 
 const HeroGrid = () => {
@@ -13,15 +13,16 @@ const HeroGrid = () => {
         <Image
           src="https://placekitten.com/g/600/600"
           alt="Category 1"
-          layout="fill"
+          className={`${styles['feature-grid-image']} ${styles['feature-grid-image--1']} z-10`}
+          priority
+          fill
           sizes="
             (max-width: 693px) 100vw, 
             (max-width: 1023px) 50vw,
             33vw"
-          objectFit='cover'
-          className={`${styles['feature-grid-image']} ${styles['feature-grid-image--1']} z-10`}
-          priority
-        />
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
       <div className={`${styles['feature-grid-item']} ${styles['fg-2']}`}>
         <div className={`${styles['feature-grid-info']} z-20`}>
@@ -32,15 +33,16 @@ const HeroGrid = () => {
         <Image
           src="https://placekitten.com/g/600/601"
           alt="Category 2"
-          layout="fill"
-          objectFit='cover'
           className={`${styles['feature-grid-image']} ${styles['feature-grid-image--2']}`}
+          priority
+          fill
           sizes="
             (max-width: 693px) 100vw, 
             (max-width: 1023px) 50vw,
             66vw"
-          priority
-        />
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
       <div className={`${styles['feature-grid-item']} ${styles['fg-3']}`}>
         <div className={`${styles['feature-grid-info']} z-20`}>
@@ -51,15 +53,16 @@ const HeroGrid = () => {
         <Image
           src="https://placekitten.com/g/601/627"
           alt="Category 3"
-          layout="fill"
-          objectFit='cover'
           className={`${styles['feature-grid-image']} ${styles['feature-grid-image--3']}`}
+          priority
+          fill
           sizes="
             (max-width: 693px) 100vw,  
             (max-width: 1023px) 50vw,
             33vw"
-          priority
-        />
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
       <div className={`${styles['feature-grid-item']} ${styles['fg-4']}`}>
         <div className={`${styles['feature-grid-info']} z-20`}>
@@ -70,15 +73,16 @@ const HeroGrid = () => {
         <Image
           src="https://placekitten.com/g/611/620"
           alt="Category 4"
-          layout="fill"
-          objectFit='cover'
           className={`${styles['feature-grid-image']} ${styles['feature-grid-image--4']}`}
+          priority
+          fill
           sizes="
             (max-width: 693px) 100vw,  
             (max-width: 1023px) 100vw,
             33vw"
-          priority
-        />
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
     </div>
   );

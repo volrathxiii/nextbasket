@@ -1,6 +1,6 @@
 
 import PostsThumbnail from "@/components/Posts/Thumbnail";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const PostsFeatured = () => {
   return (
@@ -16,39 +16,42 @@ const PostsFeatured = () => {
           image={<Image
             src="https://placekitten.com/g/300/300"
             alt="The ravishing Hefeweizen"
-            layout="fill"
-            objectFit='cover'
+            priority
+            fill
             sizes="
               (max-width: 693px) 100vw, 
               33vw"
-            priority
-          />}  />
+            style={{
+              objectFit: "cover"
+            }} />}  />
         <PostsThumbnail 
           title='A crispy bullfrog brew'
           description="Some frightened Pilsner Urquell greedily buys an expensive drink for a childlike corona light."
           image={<Image
             src="https://placekitten.com/g/300/301"
             alt="A crispy bullfrog brew"
-            layout="fill"
-            objectFit='cover'
+            priority
+            fill
             sizes="
               (max-width: 693px) 100vw, 
               33vw"
-            priority
-          />}  />
+            style={{
+              objectFit: "cover"
+            }} />}  />
         <PostsThumbnail 
           title='Another crank case'
           description="Now and then, the scooby snack reaches an understanding with a sake bomb about a bull ice."
           image={<Image
             src="https://placekitten.com/g/300/302"
             alt="Another crank case"
-            layout="fill"
-            objectFit='cover'
+            priority
+            fill
             sizes="
               (max-width: 693px) 100vw, 
               33vw"
-            priority
-          />}  />
+            style={{
+              objectFit: "cover"
+            }} />}  />
       </div>
     </div>
   );

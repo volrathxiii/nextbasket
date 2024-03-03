@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from '@/components/Product/products.module.css'
 
 const ProductDescription:React.FC<{ image: string, title: string, description: string }> = ({image,title,description}) => {
@@ -23,14 +23,15 @@ const ProductDescription:React.FC<{ image: string, title: string, description: s
         <Image
           src={image}
           alt={title}
-          layout="fill"
-          objectFit='cover'
+          priority
+          fill
           sizes="
             (max-width: 693px) 100vw, 
             (max-width: 1023px) 50vw,
             66vw"
-          priority
-        />
+          style={{
+            objectFit: "cover"
+          }} />
         </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import styles from '@/components/Testimonial/testimonial.module.css'
 import { Rating } from "@mui/material";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const TestimonialFeatured = () => {
   return (
@@ -13,18 +13,17 @@ const TestimonialFeatured = () => {
               <Image
                 src="https://placekitten.com/g/100/100"
                 alt="Regina Miles"
-                layout="fill"
-                objectFit='cover'
+                priority
+                fill
                 sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
                 style={{
                   objectFit: "cover",
-                  borderRadius: "45px"
-                }}
-                priority
-              />
+                  borderRadius: "45px",
+                  objectFit: "cover"
+                }} />
             </div>
             <div><Rating name="half-rating-read" defaultValue={4.3} precision={0.5} readOnly /></div>
             <div className="h6">Slate helps you see how many more days you need to work to reach your financial goal.</div>
@@ -39,118 +38,127 @@ const TestimonialFeatured = () => {
             <Image
               src="https://placekitten.com/g/150/150"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/151"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/152"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/153"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/154"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/155"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/156"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/158"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <div className={`background-secondary ${styles['image-grid']}`}>
             <Image
               src="https://placekitten.com/g/150/157"
               alt="Testimonial"
-              layout="fill"
-              objectFit='cover'
+              priority
+              fill
               sizes="
                 (max-width: 693px) 100vw, 
                 (max-width: 1023px) 50vw,
                 66vw"
-              priority
-            />
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { type ProductModel } from "@/app/types";
-import Image from "next/legacy/image"
+import Image from "next/image"
 import { Button, ButtonGroup } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from "@/app/store";
@@ -39,15 +39,16 @@ const CartThumbnail: React.FC<{ product: ProductModel }> = ({ product }) => {
           <Image
             src={product.thumbnail}
             alt={product.title}
-            layout="fill"
-            objectFit='cover'
+            fill
             sizes="
               (max-width: 438px) 100vw,
               (max-width: 649px) 50vw,
               (max-width: 860px) 33vw,
               (max-width: 1071px) 25vw, 
               20vw"
-          />
+            style={{
+              objectFit: "cover"
+            }} />
         </div>
 
         <div className={styles["cart-tools"]}>

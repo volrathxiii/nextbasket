@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import styles from "./imageview.module.css";
@@ -12,10 +12,11 @@ const ImageView: React.FC<{ images: Array<string> }> = ({ images }) => {
         <Image
           src={`${image}`}
           alt={`${image}`}
-          layout="fill"
-          objectFit='cover'
+          fill
           sizes="20vw"
-        />
+          style={{
+            objectFit: "cover"
+          }} />
       </div>)
   ))
 
@@ -42,18 +43,19 @@ const ImageView: React.FC<{ images: Array<string> }> = ({ images }) => {
               <Image
                 src={`${image}`}
                 alt={`${image}`}
-                layout="fill"
-                objectFit='cover'
-                sizes="20vw"
                 priority
-              />
+                fill
+                sizes="20vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </Paper>
           ))
         }
       </Carousel>
 
     </div>
-  )
+  );
 }
 
 export default ImageView;
