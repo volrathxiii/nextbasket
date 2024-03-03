@@ -2,7 +2,7 @@ import ImageView from "@/components/ImageView/ImageView"
 import { getProduct } from "@/api/Product";
 import styles from "./product.module.css"
 import productStyles from "@/components/Product/products.module.css"
-import { Stack, Button, IconButton, Rating } from "@mui/material";
+import { Stack, Button, IconButton, Rating, Link, Typography, Breadcrumbs } from "@mui/material";
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FavoriteToggler from "@/components/Favorites/Toggler";
 import ProductList from "@/components/Product/List";
@@ -14,18 +14,34 @@ import IconLyft from "@/components/Icons/lyft"
 import IconPiper from "@/components/Icons/piper"
 import IconStripe from "@/components/Icons/stripe"
 import IconReddit from "@/components/Icons/reddit"
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 export default async function Product({ params }: { params: { slug: number } }) {
   const product = await getProduct(params.slug)
   let availability = <span className="error-color">Out of stock</span>
-  if(product.stock <= 10 && product.stock > 0) {
+  if (product.stock <= 10 && product.stock > 0) {
     availability = <span className="warning-color">Only {product.stock} left</span>
-  } else if(product.stock > 10){
+  } else if (product.stock > 10) {
     availability = <span className="primary-color">In Stock</span>
   }
 
+  const breadcrumbs = [
+    <span className="link"><Link underline="hover" key="1" color="inherit" href="/">Home</Link></span>,
+    <span className="h6 muted-color" key="2">Shop</span>,
+  ];
+
   return (
     <div className="flex flex-col items-center w-full">
+      <div className={`px-9 py-6 container--sx mx-auto w-full`}>
+        <Stack spacing={2}>
+          <Breadcrumbs
+            separator={<span className="muted-color"><NavigateNextIcon fontSize="small" color="inherit" /></span>}
+            aria-label="breadcrumb"
+          >
+            {breadcrumbs}
+          </Breadcrumbs>
+        </Stack>
+      </div>
       <div className={`container container--sx mx-auto w-full`}>
         <div className={`grid grid-cols-1 sm:grid-cols-2 gap-7 pb-12`}>
           <div><ImageView images={product.images} /></div>
@@ -69,22 +85,22 @@ export default async function Product({ params }: { params: { slug: number } }) 
       </div>
       <div className={`container container--tall container--sx mx-auto w-full ${styles['footer-grid']} justify-items-center items-center `}>
         <div className="footer-icon">
-        <IconHooli />
+          <IconHooli />
         </div>
         <div className="footer-icon">
-        <IconLyft />
+          <IconLyft />
         </div>
         <div className="footer-icon">
-        <IconPiper />
+          <IconPiper />
         </div>
         <div className="footer-icon">
-        <IconStripe />
+          <IconStripe />
         </div>
         <div className="footer-icon">
-        <IconAWS />
+          <IconAWS />
         </div>
         <div className="footer-icon">
-        <IconReddit />
+          <IconReddit />
         </div>
       </div>
 
