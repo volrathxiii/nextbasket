@@ -26,7 +26,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
   }
 
   const breadcrumbs = [
-    <span className="link"><Link underline="hover" key="1" color="inherit" href="/">Home</Link></span>,
+    <span className="link" key="1"><Link underline="hover"  color="inherit" href="/">Home</Link></span>,
     <span className="h6 muted-color" key="2">Shop</span>,
   ];
 
