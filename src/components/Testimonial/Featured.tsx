@@ -1,6 +1,6 @@
 import styles from '@/components/Testimonial/testimonial.module.css'
 import { Rating } from "@mui/material";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const TestimonialFeatured = () => {
   return (

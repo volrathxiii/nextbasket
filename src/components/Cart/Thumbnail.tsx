@@ -1,5 +1,5 @@
 import { type ProductModel } from "@/app/types";
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { Button, ButtonGroup } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from "@/app/store";

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import styles from '@/components/Hero/hero.module.css'
 
 const HeroGrid = () => {

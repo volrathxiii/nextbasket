@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '@/components/Product/products.module.css'
 
 const ProductDescription:React.FC<{ image: string, title: string, description: string }> = ({image,title,description}) => {
