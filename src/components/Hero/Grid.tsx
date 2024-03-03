@@ -1,7 +1,6 @@
 import Image from "next/image"
 import styles from '@/components/Hero/hero.module.css'
 
-
 const HeroGrid = () => {
   return (
     <div className={`${styles["feature-grid"]}`}>

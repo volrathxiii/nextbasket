@@ -6,7 +6,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import CartDrawer from '@/components/Cart/Drawer';
 import FavoriteDrawer from '@/components/Favorites/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import styles from './appHeader.module.css'
 
 const AppBar = () => {

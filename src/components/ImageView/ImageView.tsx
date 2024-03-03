@@ -5,7 +5,6 @@ import { Paper } from '@mui/material'
 import styles from "./imageview.module.css";
 
 const ImageView: React.FC<{ images: Array<string> }> = ({ images }) => {
-
   const indicators: React.ReactElement[] = [];
   images.map((image) => (
     indicators.push(

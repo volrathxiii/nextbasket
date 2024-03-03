@@ -8,7 +8,6 @@ import FavoriteToggler from "@/components/Favorites/Toggler";
 import ProductList from "@/components/Product/List";
 import CartToggler from "@/components/Cart/Toggler";
 import ProductDescription from "@/components/Product/Description";
-
 import IconAWS from "@/components/Icons/aws"
 import IconHooli from "@/components/Icons/hooli"
 import IconLyft from "@/components/Icons/lyft"

@@ -6,17 +6,13 @@ import { Montserrat } from 'next/font/google';
 import AppHeader from '../components/AppHeader/AppHeader';
 import AppFooter from '@/components/AppFooter/AppFooter';
 import theme from './theme';
-
 import "./globals.css";
+
 const montserrat = Montserrat({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
-
-
-
-
 
 export const metadata: Metadata = {
   title: "NextBasket",
@@ -36,7 +32,6 @@ export default function RootLayout({
             <body className={montserrat.className}>
               <main className="flex min-h-screen flex-col">
                 <AppHeader />
-
                 {children}
                 <AppFooter />
               </main>

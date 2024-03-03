@@ -1,5 +1,4 @@
 import styles from '@/components/Hero/hero.module.css'
-
 import Button from '@mui/material/Button';
 
 const HeroBanner = () => {

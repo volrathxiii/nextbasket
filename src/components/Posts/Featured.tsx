@@ -1,9 +1,5 @@
 
 import PostsThumbnail from "@/components/Posts/Thumbnail";
-
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Image from "next/image";
 
 const PostsFeatured = () => {

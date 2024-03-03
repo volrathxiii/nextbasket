@@ -16,9 +16,7 @@
 
 .product-variant {
   text-indent: -9999px;
-  /* sends the text off-screen */
   height: 30px;
-  /* be sure to set height & width */
   width: 30px;
   white-space: nowrap;
   overflow: hidden;

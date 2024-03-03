@@ -1,11 +1,4 @@
-import { Icon, TextField, Button, FormGroup } from '@mui/material';
-import FacebookIcon from '@/components/Icons/facebook'
-import InstagramIcon from '@/components/Icons/instagram'
-import TwitterIcon from '@/components/Icons/twitter'
-import YoutubeIcon from '@/components/Icons/youtube'
-import stylesIcon from '@/components/AppHeader/appHeader.module.css'
 import Image from 'next/image';
-
 import styles from '@/components/Product/products.module.css'
 
 const ProductDescription:React.FC<{ image: string, title: string, description: string }> = ({image,title,description}) => {

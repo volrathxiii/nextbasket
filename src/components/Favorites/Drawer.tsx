@@ -7,7 +7,6 @@ import type { RootState } from "@/app/store";
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-
 import ProductThumbnail from '@/components/Product/Thumbnail';
 
 export default function FavoriteDrawer() {

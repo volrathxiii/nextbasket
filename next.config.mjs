@@ -21,10 +21,6 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  compiler: {
-    // Enables the styled-components SWC transform
-    styledComponents: true
   }
 };
 
