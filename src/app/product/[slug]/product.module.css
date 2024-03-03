@@ -51,7 +51,7 @@
 .footer-grid {
   display: grid;
   grid-template-columns: auto;
-  gap: 20px;
+  gap: 30px;
 }
 @media only screen and (min-width: 410px) {
   .footer-grid {
@@ -62,11 +62,13 @@
 @media only screen and (min-width: 690px) {
   .footer-grid {
     grid-template-columns: auto auto auto;
+    max-width: 690px;
   }
 }
 
 @media only screen and (min-width: 1112px) {
   .footer-grid {
     grid-template-columns: auto auto auto auto auto auto;
+    max-width: 1056px;
   }
 }

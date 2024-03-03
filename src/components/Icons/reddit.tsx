@@ -1,11 +1,10 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const SvgComponent = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={150}
     height={142}
     fill="none"
-    {...props}
   >
     <path
       fill="#737373"
