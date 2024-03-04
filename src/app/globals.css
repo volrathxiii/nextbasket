@@ -43,16 +43,6 @@ body {
   background-color: #FAFAFA;
 }
 
-.nav-flexbar-stack {
-  background-color: var(--secondary-background);
-  color: var(--secondary-foreground);
-}
-
-.nav-flexbar {
-  min-height: 58px;
-  /*replace*/
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -8,14 +8,14 @@ import YoutubeIcon from '@/components/Icons/youtube'
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import AppBar from '@/components/AppHeader/AppBar';
-import styles from './appHeader.module.css'
+import styles from '@/components/AppHeader/appHeader.module.css'
 
 const AppHeader = () => {
   return (
     <div>
-      <div className="nav-flexbar-stack z-10 hidden lg:flex w-full">
+      <div className={`${styles['nav-flexbar-stack']} hidden lg:flex w-full`}>
         <div className="block mx-auto container container--md w-full">
-          <div className="nav-flexbar flex flex-row flex-nowrap items-center justify-between">
+          <div className={`${styles['nav-flexbar']} flex flex-row flex-nowrap items-center justify-between`}>
             <div className={`${styles['announce-contact']} flex flex-col gap-1`}>
               <Link href="/" className='flex items-center'>
                 <LocalPhoneOutlinedIcon color="inherit" fontSize='inherit' />

@@ -39,29 +39,29 @@ const AppFooter = () => {
       </div>
       <div className='flex flex-col background-primary '>
         <div className="block mx-auto container container--md w-full">
-          <div className="flex flex-col gap-8 items-left justify-between py-10 sm:flex-row border-top-light">
-            <div className="flex flex-col gap-2.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-left justify-between py-10 border-top-light">
+            <div className="flex flex-col gap-2.5 min-w-40">
               <div className={`h5`}>Company Info</div>
               <div className='link'>About Us</div>
               <div className='link'>Carrier</div>
               <div className='link'>We are hiring</div>
               <div className='link'>Blog</div>
             </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 min-w-40">
               <div className={`h5`}>Legal</div>
               <div className='link'>About Us</div>
               <div className='link'>Carrier</div>
               <div className='link'>We are hiring</div>
               <div className='link'>Blog</div>
             </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 min-w-40">
               <div className={`h5`}>Features</div>
               <div className='link'>User Analytics</div>
               <div className='link'>Business Marketing</div>
               <div className='link'>Live Chat</div>
               <div className='link'>Unlimited Support</div>
             </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 min-w-40">
               <div className={`h5`}>Resources</div>
               <div className='link'>iOS & Android</div>
               <div className='link'>Watch a Demo</div>

@@ -1,4 +1,12 @@
 /**navigation**/
+.nav-flexbar-stack {
+  background-color: var(--secondary-background);
+  color: var(--secondary-foreground);
+}
+
+.nav-flexbar {
+  min-height: 58px;
+}
 .app-bar {
   display: grid;
   grid-template-columns: 120px auto;
