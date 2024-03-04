@@ -21,8 +21,10 @@ function Product(data:ProductType) : ProductModel {
         thumbnail: data.thumbnail,
         title: data.title,
         discountedPrice: computedPrice,
-        discountedPriceDecimal: computedPrice.toFixed(2)
+        discountedPriceNoDecimal: Number(computedPrice).toLocaleString('en-US', {minimumFractionDigits: 0}),
+        discountedPriceDecimal: Number(computedPrice).toLocaleString('en-US', {minimumFractionDigits: 2})
     }
+    
 }
 
 export function getProducts(page:number =0, limit:number = 10, category:string = "")

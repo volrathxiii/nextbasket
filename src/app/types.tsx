@@ -22,6 +22,7 @@ export interface ProductsType {
 export interface ProductModel extends ProductType {
   discountedPrice: number
   discountedPriceDecimal: string
+  discountedPriceNoDecimal: string
 }
 
 export interface ProductsModel extends ProductsType {

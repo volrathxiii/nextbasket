@@ -32,7 +32,7 @@ export default function CartDrawer() {
       }
       tempThumbnails.push(<Box key={1} className="text-center w-full pt-5">
         <div className='h6'>TOTAL</div>
-        <div className="h3">${Math.round(total).toLocaleString()}</div>
+        <div className="h3">${Number(total).toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
       </Box>)
     } else {
       // generate empty cart message

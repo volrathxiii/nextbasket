@@ -29,7 +29,7 @@ const ProductThumbnail: React.FC<{ product: ProductModel, priority: boolean }> =
           <div className={`${styles["product-brand"]} link`}>{product.brand}</div>
           <div className={styles["product-price"]}>
             <span className="h5 muted-color">${product.price}</span>&nbsp;
-            <span className="h5 secondary-color">${product.discountedPrice}</span>
+            <span className="h5 secondary-color">${product.discountedPriceNoDecimal}</span>
           </div>
         </div>
       </Link>
