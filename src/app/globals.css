@@ -49,7 +49,7 @@ body {
 }
 
 .nav-flexbar {
-  height: 58px;
+  min-height: 58px;
   /*replace*/
 }
 

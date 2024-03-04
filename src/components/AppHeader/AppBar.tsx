@@ -30,7 +30,7 @@ const AppBar = () => {
 
   return (
   <div className="background-primary">
-        <div className={`${styles['app-bar']} mx-auto container container--sm w-full`}>
+        <div className={`${styles['app-bar']} mx-auto container container--md w-full`}>
           <div className={`${styles['app-header']}`}>
             <div><Link href='/' ><span className={`h3 logo`}>Bandage</span></Link></div>
           </div>
