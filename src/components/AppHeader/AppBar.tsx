@@ -36,18 +36,18 @@ const AppBar = () => {
           </div>
           <nav className={`${styles['nav-bar']} ${styles['mobile-menu']} ${mobileOpenClass}`}>
             <ul className={`${styles['nav-group']} ${styles['nav-group--menu']}`}>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='/' className={`${styles['nav-item-menu']}`}>Home</Link></li>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='#' className={`${styles['nav-item-menu']}`}>Shop</Link></li>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='#' className={`${styles['nav-item-menu']}`}>About</Link></li>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='#' className={`${styles['nav-item-menu']}`}>Blog</Link></li>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='#' className={`${styles['nav-item-menu']}`}>Contact</Link></li>
-              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, fontWeight: 400 }} href='#' className={`${styles['nav-item-menu']}`}>Pages</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='/' className={`${styles['nav-item-menu']}`}>Home</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='#' className={`${styles['nav-item-menu']}`}>Shop</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='#' className={`${styles['nav-item-menu']}`}>About</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='#' className={`${styles['nav-item-menu']}`}>Blog</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='#' className={`${styles['nav-item-menu']}`}>Contact</Link></li>
+              <li className={`${styles['nav-item']}`}><Link color='info' sx={{ fontSize: { xs: 30, sm: 30, md: 14, lg: 14 }, }} href='#' className={`${styles['nav-item-menu']}`}>Pages</Link></li>
           </ul>
           </nav>
           <nav className={`${styles['nav-bar--tools']}`}>
           <ul className={`${styles['nav-group']} ${styles['nav-group--tools']}`}>
               <li className={`${styles['nav-item-tool']} ${styles['desktop-only']}`}>
-                <Link href='#' sx={{ minWidth: 40, fontSize: { xs: 14, sm: 14, md: 14, lg: 14 }, fontWeight: 400 }} className={`${styles['nav-item-menu']}`}>
+                <Link href='#' sx={{ minWidth: 40, fontSize: { xs: 14, sm: 14, md: 14, lg: 14 } }} className={`${styles['nav-item-menu']}`}>
                   <PersonOutlineIcon sx={{ fontSize: { xs: 24, sm: 24, md: 18, lg: 18 } }}/>Login/Register
                 </Link>
               </li>

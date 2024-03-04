@@ -48,7 +48,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
           <div className={`${styles['product-info']}`}>
             <div className={`${styles['product-details']}`}>
               <div className="h4 color-muted">{product.title}</div>
-              <div className="product-rating"><div><Rating name="half-rating-read" defaultValue={product.rating} precision={0.5} readOnly /></div> <span className="h6">Reviews</span></div>
+              <div className={`${styles['product-rating']}`}><span><Rating name="half-rating-read" defaultValue={product.rating} precision={0.5} readOnly /></span> <span className="h6">Reviews</span></div>
               <h3 className="h3">${product.discountedPriceDecimal}</h3>
               <div className="h6 product-availability">Availability: {availability}</div>
               <div className={`paragraph ${productStyles['product-description--mobile']}`}>{product.description}</div>
@@ -60,7 +60,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
               <span className={`${styles['product-variant']} ${styles['product-variant--black']}`}>Black</span>
             </div>
             <div className={`${styles['product-options']}`}>
-              <Stack direction="row" spacing={0}>
+              <Stack direction="row" spacing={1}>
                 <Button color="primary" variant="contained">Select Options</Button>
                 <FavoriteToggler product={product}></FavoriteToggler>
                 <CartToggler product={product}></CartToggler>
@@ -83,7 +83,7 @@ export default async function Product({ params }: { params: { slug: number } }) 
         </div>
         <ProductList limit={8} category={product.category} id="similar-products"></ProductList>
       </div>
-      <div className={`container container--tall container--sx mx-auto w-full ${styles['footer-grid']} justify-items-center items-center `}>
+      <div className={`container--tall container--sx mx-auto w-full ${styles['footer-grid']} justify-items-center items-center `}>
         <div className="footer-icon">
           <IconHooli />
         </div>

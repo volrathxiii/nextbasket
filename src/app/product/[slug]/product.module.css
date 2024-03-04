@@ -2,12 +2,18 @@
   height: 450px;
   display: grid;
   grid-template-rows: 277px auto 40px;
+  padding: 0 24px;
 }
 
 .product-details {
   padding: 10px;
   height: 277px;
   border-bottom: 1px solid #bdbdbd;
+}
+
+.product-rating {
+  display: flex;
+  padding: 10px 0
 }
 
 .product-variants {
