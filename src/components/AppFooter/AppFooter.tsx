@@ -9,7 +9,7 @@ const AppFooter = () => {
   return (
     <div>
       <div className='flex flex-col background-primary'>
-        <div className="block mx-auto container container--sm w-full">
+        <div className="block mx-auto container container--md w-full">
           <div className="flex flex-col items-left justify-between py-10 sm:flex-row sm:items-center">
             <div className={`h3 logo p-2`}>Bandage</div>
             <div>
@@ -38,7 +38,7 @@ const AppFooter = () => {
         </div>
       </div>
       <div className='flex flex-col background-primary '>
-        <div className="block mx-auto container container--sm w-full">
+        <div className="block mx-auto container container--md w-full">
           <div className="flex flex-col gap-8 items-left justify-between py-10 sm:flex-row border-top-light">
             <div className="flex flex-col gap-2.5">
               <div className={`h5`}>Company Info</div>
