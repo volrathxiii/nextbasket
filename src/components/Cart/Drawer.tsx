@@ -20,10 +20,10 @@ export default function CartDrawer() {
 
   useEffect(() => {
     const cartItems = Object.keys(cart).length;
+    setCount(cartItems)
     const tempThumbnails = []
     let total:number = 0;
     if(cartItems) {
-      setCount(cartItems)
       disableCheckoutButton(false)
       // generate cart summary
       for (const [key, value] of Object.entries(cart)) {
